@@ -8,7 +8,7 @@ http.createServer(function(request,response){
 		response.write('<h2>Home Page</h2>');
 	}
 
-	else if(request.url === "/is-13"){
+	else if(request.url === "/is-13fiot-23-1323"){
 		response.write('<h2> Olesia Skydan 2 cours IS-13</h2>');
 	}
 	else{
