@@ -1,0 +1,22 @@
+<html>
+<body>
+   <h2>Exchange rate against the dollar</h2>
+   <div id = "output"> </div>
+   <script>
+      let output = document.getElementById('output');
+      function fetchData() {
+         fetch('https://openexchangerates.org/api/latest.json?app_id=423aac459349423f9e4cdc4acff528a1&prettyprint=false&show_alternative=false')
+         .then(response => response.json())
+         .then(data => {
+            output.innerHTML += "UAH = " + data.rates.UAH + "<br/>";
+            output.innerHTML += "EUR = " + data.rates.EUR + "<br/>";
+            output.innerHTML += "GBP = " + data.rates.GBP + "<br/>";
+            output.innerHTML += "CHF = " + data.rates.CHF + "<br/>";
+            output.innerHTML += "PLN = " + data.rates.PLN + "<br/>";
+            output.innerHTML += "JPY = " + data.rates.JPY + "<br/>";
+         })
+      }
+      fetchData()
+   </script>
+</body>
+</html>
